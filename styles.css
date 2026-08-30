@@ -131,6 +131,21 @@ header.site-header {
   letter-spacing: 0.25em;
   margin-top: 2px;
 }
+.wordmark { display: block; width: auto; }
+.wordmark path { fill: var(--white); }
+.wordmark-nav { height: 28px; margin-top: 1px; }
+.wordmark-footer { height: 32px; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 nav.main-nav {
   display: flex;
