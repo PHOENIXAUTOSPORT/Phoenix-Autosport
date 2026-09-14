@@ -9,8 +9,56 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* mockup-only addition — hero slogan line */
+  .hero-slogan-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 165px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+  }
+  .hero-slogan {
+    display: block;
+    color: var(--gold);
+    font-family: var(--font-head);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: clamp(1.5rem, 3.4vw, 2.3rem);
+    line-height: 1.15;
+    max-width: 640px;
+    margin: 0;
+    text-shadow: 0 2px 14px rgba(0,0,0,0.6);
+  }
+  @media (max-width: 700px) {
+    .hero-slogan-wrap { height: 150px; }
+    .hero-slogan { font-size: clamp(1.2rem, 5vw, 1.7rem); }
+  }
+  .quote-banner-cite {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+    font-family: var(--font-head);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.78rem;
+    color: #0a0a0b;
+    opacity: 0.75;
+    text-align: center;
+  }
+  .mockup-banner {
+    background: repeating-linear-gradient(45deg, #f0b322, #f0b322 12px, #0a0a0b 12px, #0a0a0b 24px);
+    color: #0a0a0b; text-align: center; font-family: var(--font-head); text-transform: uppercase;
+    letter-spacing: 0.08em; font-size: 0.85rem; padding: 8px;
+  }
+  .mockup-banner span { background: #0a0a0b; color: var(--gold); padding: 4px 14px; border-radius: 3px; }
+</style>
 </head>
 <body>
+<div class="mockup-banner"><span>MOCKUP — For Review Only — Not Published</span></div>
 
 <header class="site-header">
   <div class="nav-row">
@@ -20,6 +68,7 @@
     </a>
     <nav class="main-nav">
       <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -45,6 +94,11 @@
       <img src="assets/race-car.jpg" alt="Phoenix Autosport race car on track">
       <div class="hero-overlay"></div>
     </div>
+    <div class="hero-slogan-wrap">
+      <div class="container">
+        <span class="hero-slogan">30+ Years Of Racecraft From Trackside To Podium</span>
+      </div>
+    </div>
     <div class="container hero-full-inner">
       <div class="ribbon">
         <span class="ribbon-big">Taupō</span>
@@ -65,7 +119,8 @@
       <path d="M0,20 L60,20 M60,10 L90,20 L60,30" fill="none" stroke="#0a0a0b" stroke-width="3" stroke-linecap="round"/>
       <path d="M200,20 L140,20 M140,10 L110,20 L140,30" fill="none" stroke="#0a0a0b" stroke-width="3" stroke-linecap="round"/>
     </svg>
-    <blockquote>&ldquo;Professional friendly service from the workshop to the chequered flag.&rdquo;</blockquote>
+    <blockquote>&ldquo;His knowledge, attention to detail and commitment have played a huge role in my development and success as a driver on track.&rdquo;</blockquote>
+    <cite class="quote-banner-cite">— Toby Elmiger, 2025/26 TA2NZ Championship</cite>
   </section>
 
   <section>
@@ -121,6 +176,7 @@
           <li><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M8 12l2.5 2.5L16 9"/></svg> Honest, friendly service, every time</li>
           <li><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M8 12l2.5 2.5L16 9"/></svg> One team — from the workshop to the chequered flag</li>
         </ul>
+        <a href="about.html" class="btn btn-ghost" style="margin-top:24px;">Read Matt's Story</a>
       </div>
       <div class="about-panel">
         <div class="about-panel-inner">
@@ -169,6 +225,7 @@
       <div class="footer-col">
         <h4>Site</h4>
         <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
       </div>
